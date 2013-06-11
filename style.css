@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    font-size: 9pt;
+    border: 0;
+    padding: 15px;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+h1 strong {
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+.item {
+    display: block;
+    float: left;
+    width: 225px;
+    height: 128px;
+    margin: 5px;
+    position: relative;
+    color: #222;
+}
+
+.item:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid #fff;
+    -webkit-transition-duration: .25s;
+}
+
+.item:hover {
+    border-color: #E2E2E2;
+    -webkit-transition-duration: .1s;
+}
+
+.item:active {
+    -webkit-transform: scale(0.97);
+}
+
+.item-folder {
+    background: linear-gradient(to bottom, #2778B7 0%, #2D5470 100%);
+    color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .1);
+}
+
+.item-folder:before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 1px;
+    background: linear-gradient(to bottom, #97CEF6 0%, #6EAAD8 100%);
+    border-radius: 1px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background-origin: border-box;
+}
+
+.item-folder .favicon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 50%;
+    top: 50%;
+    margin: -8px;
+}
+
+.item span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px 28px 5px 10px;
+    word-break: break-all;
+    line-height: 19px;
+    font-size: 14px;
+}
+
+.item-file:before {
+    display: block;
+    font-family: monospace;
+    font-size: 32px;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 50%;
+    line-height: 32px;
+    margin: -24px 0;
+    color: #bbb;
+}
+
+.item-file i {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 20px solid #fff;
+    border-left-color: rgba(255, 255, 255, .5);
+    border-bottom-color: rgba(255, 255, 255, .5);
+}
+
+.item-file i:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -20px;
+    top: 20px;
+    border: 20px solid rgba(0, 0, 0, .05);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.item-file {
+    background: #ddd;
+}
+
+.item-file[type=php]:before {
+    content: '\<?\>';
+}
+
+.item-file[type=css]:before {
+    content: '{ }';
+}
+
+.item-file[type=html]:before,
+.item-file[type=htm]:before,
+.item-file[type=xml]:before {
+    content: '</>';
+}
+
+.item-file[type=js]:before {
+    content: '{;}';
+}
+
+.item-file[type=csv]:before {
+    content: ',,,';
+}
+
+.item .tags {
+    position: absolute;
+    right: 0;
+    padding: 7px 8px;
+}
+
+.tag {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    float: right;
+    box-sizing: border-box;
+    margin: 0 0 0 -6px;
+    border: 1px solid #fff;
+}
+
+.item-file .tag {
+    box-shadow: 0 0 0 1px #ddd;
+}
+
+.item-folder .tag {
+    border-color: #fff;
+    box-shadow: 0 0 0 1px #5B8FAF;
+}
+
+.tag-red {
+    background: #FC7377;
+    border-color: #CB5256;
+}
+
+.tag-orange {
+    background: #FEBD2F;
+    border-color: #FD8810;
+}
+
+.tag-yellow {
+    background: #FFF021;
+    border-color: #E0CB09;
+}
+
+.tag-green {
+    background: #B2F11F;
+    border-color: #90C718;
+}
+
+.tag-blue {
+    background: #85C7FF;
+    border-color: #578EC1;
+}
+
+.tag-purple {
+    background: #E49FFE;
+    border-color: #CB4EFE;
+}
+
+.tag-grey {
+    background: #BCBCBC;
+    border-color: #8F8F8F;
+}

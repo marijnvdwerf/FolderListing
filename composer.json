@@ -1,0 +1,12 @@
+{
+    "name": "marijnvdwerf/taglisting",
+    "require": {
+        "rodneyrehm/plist": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Marijn van der Werf",
+            "email": "marijn.vanderwerf@gmail.com"
+        }
+    ]
+}
